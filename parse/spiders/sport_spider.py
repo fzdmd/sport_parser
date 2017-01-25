@@ -8,7 +8,7 @@ class QuotesSpider(scrapy.Spider):
     def start_requests(self):
         url = 'https://sports.giocodigitale.it/it/sports';
         yield scrapy.Request(url=url, callback=self.parse)
-
+    # import pdb; pdb.set_trace()
     def parse(self, response):
         html = lxml.html.fromstring(response.text);
         result = Import();
